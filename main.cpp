@@ -4,7 +4,7 @@
 #include "Header.h"
 using namespace std;
 
-int menu (void) {
+int menu (void) {   //Console interface
     int r=0;
     cout<<"Functions: "<<endl<<"1.Add element"<<endl<<"2.Delete element"<<endl<<"3.Show elements in streight order"<<endl<<"4.Show elements in backward order"<<endl<<"5.Search by flight number"<<endl<<"6.Sell Tickets"<<endl<<"7.Exit"<<endl;
     cin>>r;
@@ -25,10 +25,10 @@ int main(int argc, char** argv) {
     ifstream myfile;
     flight data;
     int filecheck=0;
-    myfile.open(filename,ios::binary | ios::out);   //Заполнение листа из файла
-    if (myfile.is_open())
+    myfile.open(filename,ios::binary | ios::out);   // Make list from file.
+    if (myfile.is_open())   
     {
-        if ( myfile.peek()==ifstream::traits_type::eof() ){
+        if ( myfile.peek()==ifstream::traits_type::eof() ){ 
             cout<<"File is empty"<<endl;
             filecheck=1;
         }
@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
         cout << "Unable to open file";
         return 0;
     }
-    int r;
+    int r;      //Key input 
     do{
         r=menu();
         switch(r)
