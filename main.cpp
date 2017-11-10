@@ -1,10 +1,3 @@
-//
-//  main.cpp
-//  Lab1_T1_2.0
-//
-//  Created by Александр on 09/11/2017.
-//  Copyright © 2017 11. All rights reserved.
-//
 #include <iostream>
 #include <string.h>
 #include <fstream>
