@@ -1,7 +1,7 @@
 #ifndef Header_h
 #define Header_h
 using namespace std;
-struct flight {
+struct flight {     //List element's data.
     int numb;
     string destination;
     float time;
@@ -30,7 +30,7 @@ struct flight {
         cout<<"______________________________________________\n"<<endl;
     }
 };
-struct Node
+struct Node     //Element of the list
 {
     flight data;
     Node *N,*P;
@@ -76,7 +76,7 @@ void List::AddElement(flight x,int f,char* filename) {
         front = n;
     }
 
-    if (f==1) { 
+    if (f==1) {     //Check whether new element must be added into file
         ofstream myfile;
         flight data;
         myfile.open(filename,ios::binary | ios::in | ios_base::app);
